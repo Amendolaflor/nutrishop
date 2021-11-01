@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: azure;
+  background-color: white;
 
 }
 
@@ -41,6 +41,7 @@ body {
 
 nav {
   position: fixed;
+  z-index: 1;
   width: 100%;
   line-height: 60px;
 }
@@ -119,9 +120,52 @@ nav ul li a {
 }
 
 /* Seccion poductos */
+/* seccion main */
 section {
-  height: 900px;
+	padding-top: 50px;
 }
+
+section>#contenidoGenerado {
+	padding-left: 100px;
+	padding-right: 100px;
+	justify-content: center;
+}
+
+section .card-deck {
+	padding-bottom: 40px;
+  margin: 5% 0%;
+}
+
+.card {
+  background-color: white;
+  border-color: white;
+
+}
+
+section .card-deck .div-boton-comprar {
+	padding-left: 50%;
+}
+
+section .card-deck .rating {
+	padding-left: 0%;
+}
+
+@media (max-width: 700px) {
+	.card-body {
+		padding: 0 1rem 1rem 1rem;
+	}
+
+	.card-top {
+		padding: 0.7rem 1rem;
+	}
+}
+.btn-danger {
+  background-color: #f3588c
+}
+.btn-danger:hover {
+  background-color: rgb(212, 58, 117)
+}
+
 
 
 /* footer */
