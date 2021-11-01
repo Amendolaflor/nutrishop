@@ -1,31 +1,29 @@
- $(document).ready(function() {
-            $(".menu-icon").on("click", function() {
-                  $("nav ul").toggleClass("showing");
-            });
-      });
+$(document).ready(function () {
+  $(".menu-icon").on("click", function () {
+    $("nav ul").toggleClass("showing");
+  });
+});
 
-      // Scrolling Effect
+// EFECTO EN SCROLLING
 
-      $(window).on("scroll", function() {
-            if($(window).scrollTop()) {
-                  $('nav').addClass('black');
-            }
+$(window).on("scroll", function () {
+  if ($(window).scrollTop()) {
+    $("nav").addClass("black");
+  } else {
+    $("nav").removeClass("black");
+  }
+});
 
-            else {
-                  $('nav').removeClass('black');
-            }
-      })
 /// RECORRO EL ARRAY DE TODOS LOS PRODUCTOS
-for(let food of dataFood){
-    crearFichaProducto(food);
+for (let food of dataFood) {
+  crearFichaProducto(food);
 }
 
-
 /// FUNCION PARA RENDERIZAR FICHAS DE CADA PRODUCTO POR MEDIO DEL DOM
-function crearFichaProducto(food){
-	 let cont_father = document.getElementById("contenidoGenerado");
- 	 let cont_child = document.createElement("div");
- 	cont_child.innerHTML = `<div class="container">
+function crearFichaProducto(food) {
+  let cont_father = document.getElementById("contenidoGenerado");
+  let cont_child = document.createElement("div");
+  cont_child.innerHTML = `<div class="container">
                             <div class="card-deck">
                               <div class="col-lg-8 card-area">
                                 <div class="card" style="width:18rem" id="ficha">
@@ -41,9 +39,7 @@ function crearFichaProducto(food){
                                 </div>
                               </div>
                             </div>
-                          </div>`
+                          </div>`;
 
- 		
-	  cont_father.appendChild(cont_child);
+  cont_father.appendChild(cont_child);
 }
-
